@@ -1,0 +1,23 @@
+# GraphQL schema example
+#
+# https://gqlgen.com/getting-started/
+
+type MovieSummary {
+    adult: Boolean!
+    backdrop_path: String!
+    genre_ids: [Int!]!
+    id: Int!
+    original_language: String!
+    original_title: String!
+    overview: String!
+    poster_path: String!
+    release_date: String!
+    title: String!
+}
+
+type Query {
+    hotMovies:[MovieSummary!]!
+    comingSoonMovies:[MovieSummary!]!
+}
+
+#type Mutation {}

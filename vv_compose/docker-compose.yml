@@ -1,0 +1,71 @@
+version: "3"
+volumes:
+  datanode-volume:
+    driver: local
+
+services:
+  #  app:
+  #    build: ../vv
+  #    tty: true
+  #    ports:
+  #      - 8080:8080
+  #    environment:
+  #      - USER=user
+  #      - PASS=""
+  #      - HOST=db
+  #      - PORT=3306
+  #    volumes:
+  #      - ../vv:/tmp/vv
+
+
+  #  proxy:
+  #    build: proxy
+  #    ports:
+  #      - 80:8080
+  #      - 9901:9901
+
+  bff:
+    build: ../vv_bff/bff
+    ports:
+      - 80:8080
+    volumes:
+      - ../vv_bff/bff:/go/src/bff
+    environment:
+      - ACCESS_CONTROL_ALLOW_ORIGIN=http://localhost:4200
+
+  movie_service:
+    build: ../vv_services/movie_service
+    ports:
+      - 9090:9090
+    volumes:
+      - ../vv_services/movie_service:/go/src/movie_service
+    environment:
+      - TMDB_TOKEN=${TMDB_TOKEN}
+
+  cache:
+    image: redis:5.0.5
+    ports:
+      - 6379:6379
+
+  #  db:
+  #    image: mysql:5.7
+  #    ports:
+  #      - 3306:3306
+  #    volumes:
+  #      - datanode-volume:/var/lib/mysql
+  #      - ./mysql/conf/mysqld.cnf:/etc/mysql/mysql.conf.d/mysqld.cnf
+  #    environment:
+  #      - MYSQL_ALLOW_EMPTY_PASSWORD=yes
+  #      - MYSQL_USER=user
+  #      - MYSQL_PASSWORD=pass
+  #    healthcheck:
+  #      test: ["CMD-SHELL", "mysql -uroot"]
+  #      interval: 10s
+  #      timeout: 3s
+  #      retries: 3
+#  fluentd:
+#    build: fluentd
+#    volumes:
+#      - ./fluentd/data:/fluentd/log
+#    ports:
+#      -  24224:24224

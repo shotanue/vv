@@ -1,0 +1,71 @@
+{
+  "results": [
+    {
+      "vote_count": 411,
+      "id": 420818,
+      "video": false,
+      "vote_average": 7,
+      "title": "The Lion King",
+      "popularity": 585.503,
+      "poster_path": "/dzBtMocZuJbjLOXvrl4zGYigDzh.jpg",
+      "original_language": "en",
+      "original_title": "The Lion King",
+      "genre_ids": [
+        12,
+        16,
+        10751,
+        18,
+        28
+      ],
+      "backdrop_path": "/1TUg5pO1VZ4B0Q1amk3OlXvlpXV.jpg",
+      "adult": false,
+      "overview": "",
+      "release_date": "2019-08-09"
+    },
+    {
+      "vote_count": 0,
+      "id": 568012,
+      "video": false,
+      "vote_average": 0,
+      "title": "劇場版『ONE PIECE STAMPEDE』（スタンピード）",
+      "popularity": 4.292,
+      "poster_path": "/tiqxe3c1uzVYCNhADeD5KyVtINP.jpg",
+      "original_language": "ja",
+      "original_title": "劇場版『ONE PIECE STAMPEDE』（スタンピード）",
+      "genre_ids": [
+        16
+      ],
+      "backdrop_path": "/jAvDJ0ZAj8WTrCKKcQYnceALkJc.jpg",
+      "adult": false,
+      "overview": "",
+      "release_date": "2019-08-09"
+    },
+    {
+      "vote_count": 0,
+      "id": 592867,
+      "video": false,
+      "vote_average": 0,
+      "title": "ドラゴンクエスト ユア・ストーリー",
+      "popularity": 2.333,
+      "poster_path": "/tFwyrBpNm5IkjHEhILzZATVrCaI.jpg",
+      "original_language": "ja",
+      "original_title": "ドラゴンクエスト ユア・ストーリー",
+      "genre_ids": [
+        12,
+        16,
+        14
+      ],
+      "backdrop_path": "/x8ZVUxnWmV7uwklYE07OIN2Mm2v.jpg",
+      "adult": false,
+      "overview": "",
+      "release_date": "2019-08-02"
+    }
+  ],
+  "page": 1,
+  "total_results": 3,
+  "dates": {
+    "maximum": "2019-08-11",
+    "minimum": "2019-07-27"
+  },
+  "total_pages": 1
+}

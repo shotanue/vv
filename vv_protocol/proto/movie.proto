@@ -1,0 +1,64 @@
+syntax = "proto3";
+
+package protocol;
+
+// --------------------------
+// types
+// --------------------------
+message MovieSummary {
+    bool adult = 1;
+    string backdrop_path = 2;
+    repeated int32 genre_ids = 3;
+    int32 id = 4;
+    string original_language = 5;
+    string original_title = 6;
+    string overview = 7;
+    string poster_path = 8;
+    string release_date = 9;
+    string title = 10;
+}
+
+message Genre {
+    int32 id = 1;
+    string name = 2;
+}
+
+message MovieDetail {
+    int32 id = 1;
+    string title = 2;
+    repeated Genre genres = 3;
+    string homepage = 4;
+    string poster_path = 5;
+    string release_date = 6;
+    string backdrop_path = 7;
+}
+
+// --------------------------
+// services
+// --------------------------
+service MovieService {
+    rpc HotMovies (HotMoviesRequest) returns (HotMoviesResponse);
+    rpc ComingSoonMovies (ComingSoonMoviesRequest) returns (ComingSoonMoviesResponse);
+    rpc MovieDetail (MovieDetailRequest) returns (MovieDetailResponse);
+}
+
+// --------------------------
+// requests and responses
+// --------------------------
+message HotMoviesRequest {
+}
+message HotMoviesResponse {
+    repeated MovieSummary summaries = 1;
+}
+
+message ComingSoonMoviesRequest {
+}
+message ComingSoonMoviesResponse {
+    repeated MovieSummary summaries = 1;
+}
+
+message MovieDetailRequest {
+}
+message MovieDetailResponse {
+    MovieDetail detail = 1;
+}
