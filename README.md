@@ -27,6 +27,12 @@ Angularのお作法に従って色々よしなにしてもらえれば、単純�
 (なお、vvについて意味は特にないです。  
 ...が、頭につけるnamespaceとして使いやすいというのはあります。)
 
+## 構成
+
+<img width="923" alt="vv_architecture" src="https://user-images.githubusercontent.com/22065594/61609386-ee03b800-ac90-11e9-832d-b69cac59a97f.png">
+
+
+
 ## 主に使っているもの
 - フロントエンド
     - Angular
@@ -45,6 +51,9 @@ Angularのお作法に従って色々よしなにしてもらえれば、単純�
     - golang
     - grpc
     - wire
+    
+    
+
 
 ##　動かし方
 ```bash
