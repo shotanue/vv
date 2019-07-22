@@ -64,6 +64,5 @@ cd vv_compose
 docker-compose up -d
 ```
 
-##　実際に動いているところ(WIP)
-https://mitaii.com
+
 
